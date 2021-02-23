@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AboutMeComponent } from './shared/about-me/about-me.component';
 import { CategoryWidgetComponent } from './shared/category-widget/category-widget.component';
 
 import { FooterComponent } from './shared/footer/footer.component';
@@ -14,6 +15,7 @@ import { SideWidgetComponent } from './shared/side-widget/side-widget.component'
   declarations: [
     AppComponent,
     NavBarComponent,
+    AboutMeComponent,
     SearchWidgetComponent,
     CategoryWidgetComponent,
     SideWidgetComponent,
