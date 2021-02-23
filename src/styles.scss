@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/scss/variables';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'src/assets/scss/bootswatch';
+
+body{
+    padding-top: 55px;
+}
