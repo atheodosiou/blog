@@ -1,7 +1,21 @@
 <app-nav-bar></app-nav-bar>
 <!-- Page Content -->
 <div class="container">
-  <router-outlet></router-outlet>
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+      <!-- Search Widget -->
+      <app-search-widget></app-search-widget>
+      <!-- Categories Widget -->
+      <app-category-widget></app-category-widget>
+      <!-- Side Widget -->
+      <app-side-widget></app-side-widget>
+    </div>
+  </div>
 </div>
 <!-- Footer -->
 <app-footer></app-footer>
