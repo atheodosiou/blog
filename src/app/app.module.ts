@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutMeComponent } from './shared/about-me/about-me.component';
-import { CategoryWidgetComponent } from './shared/category-widget/category-widget.component';
-
-import { FooterComponent } from './shared/footer/footer.component';
+import { AboutMeComponent } from './shared/components/about-me/about-me.component';
+import { CategoryWidgetComponent } from './shared/components/category-widget/category-widget.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { SearchWidgetComponent } from './shared/components/search-widget/search-widget.component';
+import { SideWidgetComponent } from './shared/components/side-widget/side-widget.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
-import { SearchWidgetComponent } from './shared/search-widget/search-widget.component';
-import { SideWidgetComponent } from './shared/side-widget/side-widget.component';
 
 @NgModule({
   declarations: [
