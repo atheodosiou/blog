@@ -1,31 +1,43 @@
-<!-- Title -->
-<h1 class="mt-4">Post Title</h1>
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Title -->
+      <h1 class="mt-4">Post Title</h1>
 
-<!-- Author -->
-<p class="lead">
-  by
-  <a href="#">Anastasios Theodosiou</a>
-</p>
+      <!-- Author -->
+      <p class="lead">
+        by
+        <a href="#">Anastasios Theodosiou</a>
+      </p>
 
-<hr>
+      <hr>
 
-<!-- Date/Time -->
-<p>Posted on January 1, 2019 at 12:00 PM</p>
+      <!-- Date/Time -->
+      <p>Posted on January 1, 2019 at 12:00 PM</p>
 
-<hr>
+      <hr>
 
-<!-- Preview Image -->
-<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
-<hr>
+      <hr>
 
-<!-- Post Content -->
-<app-post-content></app-post-content>
+      <!-- Post Content -->
+      <app-post-content></app-post-content>
 
-<hr>
+      <hr>
 
-<!-- Comments Form -->
-<app-comment-form></app-comment-form>
+      <!-- Comments Form -->
+      <app-comment-form></app-comment-form>
 
-<!-- Comment with nested comments -->
-<app-comments></app-comments>
+      <!-- Comment with nested comments -->
+      <app-comments></app-comments>
+    </div>
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+      <app-category-widget></app-category-widget>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
