@@ -1,11 +1,6 @@
 <h1 class="my-4">Welcome to my personal
   <small>blog</small>!
 </h1>
+<!-- <app-search-widget></app-search-widget> -->
 <!-- Blog Post -->
-<app-blog-post></app-blog-post>
-<!-- Blog Post -->
-<app-blog-post></app-blog-post>
-<!-- Blog Post -->
-<app-blog-post></app-blog-post>
-<!-- Pagination -->
-<app-paginator></app-paginator>
+<app-blog-post *ngFor="let post of blogPosts" [blogPost]="post"></app-blog-post>

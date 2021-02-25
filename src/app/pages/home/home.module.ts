@@ -11,7 +11,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
       path: '',
       component: HomeComponent
     }]),
-    SharedModule
+    SharedModule,
   ],
   declarations: [HomeComponent],
   exports: [HomeComponent]

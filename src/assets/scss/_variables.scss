@@ -4,6 +4,7 @@
 //
 // Color system
 //
+$facebook-dark :#050505!default;
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -13,11 +14,11 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
-$gray-800: #373a3c !default;
+$gray-800: $facebook-dark !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #2780e3 !default;
+$blue:    #1877F2 !default;
 $indigo:  #6610f2 !default;
 $purple:  #613d7c !default;
 $pink:    #e83e8c !default;
@@ -43,8 +44,9 @@ $enable-rounded: false !default;
 
 // Body
 
-$body-color:    $gray-800 !default;
-
+$body-color:    $facebook-dark !default;
+$body-bg:     #F0F2F5 !default;
+$bg-dark:       $facebook-dark !default;
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
@@ -57,7 +59,7 @@ $headings-font-weight:      300 !default;
 
 $navbar-dark-hover-color:       rgba($white, 1) !default;
 $navbar-light-hover-color:      rgba($black, .9) !default;
-
+$navbar-brand-font-size:        2rem !default;
 // Alerts
 
 $alert-border-width:            0 !default;
@@ -65,3 +67,6 @@ $alert-border-width:            0 !default;
 // Progress bars
 
 $progress-height:               .5rem !default;
+
+//Spacer
+$spacer: 2rem !default;

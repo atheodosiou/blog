@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
-  { path: 'post', loadChildren: () => import('./pages/post/post.module').then(m => m.PostModule) },
+  { path: 'post/:id', loadChildren: () => import('./pages/post/post.module').then(m => m.PostModule) },
   { path: '**', redirectTo: '/home' }
 ];
 

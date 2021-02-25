@@ -4,5 +4,10 @@
 @import 'src/assets/scss/bootswatch';
 
 body{
-    padding-top: 55px;
+    padding-top: 71px;
+}
+
+.rounded-top{
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
