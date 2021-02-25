@@ -1,4 +1,4 @@
-<div class="card mb-4 border-0 shadow-sm rounded">
+<div class="card mb-3 border-0 shadow rounded">
   <img class="card-img-top rounded-top" [src]="blogPost.imageUrl" alt="Card image cap">
   <div class="card-body">
     <h2 class="card-title">{{blogPost.title}}</h2>
@@ -6,7 +6,7 @@
     <hr>
     <div class="d-flex flex-row align-items-center justify-content-between">
       <p class="text-muted p-0 m-0">Posted on 24 Febrouary 2021 by <a>{{blogPost.author}}</a></p>
-      <a class="btn btn-primary" routerLink="/post/{{blogPost._id}}">Read More &rarr;</a>
+      <a class="btn btn-primary" routerLink="/post/{{blogPost?._id}}">Read More &rarr;</a>
     </div>
   </div>
   <!-- <div class="card-footer text-muted">
