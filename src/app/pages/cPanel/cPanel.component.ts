@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CPanelComponent implements OnInit {
 
   constructor() { }
-
+  htmlContent: string;
   ngOnInit() {
   }
 

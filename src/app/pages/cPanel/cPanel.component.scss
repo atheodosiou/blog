@@ -1,7 +1,16 @@
 .c-panel-wrapper{
+    min-width: 100vw;
+    width: 100vw;
+    overflow-x: auto;
 
     .scrollable{
-        height: calc(100vh - 68px);
+        height: 100%;
+        overflow-y: auto;   
+    }
+    .preview-panel{
+        height: 80vh;
+        margin-top: 1rem;
+        padding: .5rem .8rem 1rem;
         overflow-y: auto;
     }
 }

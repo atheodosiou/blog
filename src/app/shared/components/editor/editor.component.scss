@@ -1,0 +1,13 @@
+::ng-deep .angular-editor-toolbar{
+    background-color: white !important;
+}
+
+::ng-deep .angular-editor-wrapper{
+    height: 80vh !important;
+    .angular-editor-textarea {
+        height: 100% !important;
+        overflow-y: auto !important;
+        margin-top: 1rem !important;
+        background-color: white !important;
+    }
+}
