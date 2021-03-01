@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPost } from 'src/app/shared/models/blog-post.model';
+import { SdkService } from 'src/app/shared/services/sdk.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,9 @@ import { BlogPost } from 'src/app/shared/models/blog-post.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  limit: number = 3;
 
-  constructor() { }
+  constructor(private sdk: SdkService) { }
   blogPosts: BlogPost[] = [];
   blogPostPreview: string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!';
 
@@ -19,16 +21,8 @@ export class HomeComponent implements OnInit {
     'In non diam justo. Sed elementum metus vitae ligula faucibus commodo. Donec quis dignissim ligula. Quisque ultricies turpis vel elementum feugiat. Praesent ultricies molestie sem et tincidunt. Vestibulum fringilla risus et venenatis ultrices. Ut rutrum purus neque, sollicitudin scelerisque nunc dictum sit amet. Curabitur in eleifend metus. Curabitur nec leo eget sapien pretium iaculis in a massa. Curabitur luctus ut dolor at consequat. Suspendisse congue ligula non sapien congue, tristique hendrerit justo porta. Integer eget velit placerat, gravida tellus eget, vulputate magna. Duis accumsan lectus quis sem commodo tristique. Proin rhoncus libero magna, ac luctus lectus porttitor sit amet. Etiam et mauris ligula.';
 
   ngOnInit() {
-    for (let i = 0; i < 3; i++) {
-      this.blogPosts.push({
-        _id: i.toString(),
-        title: `Blog post title ${i + 1}`,
-        preview: this.blogPostPreview,
-        author: 'Anastasios Theodosiou',
-        imageUrl: 'https://picsum.photos/750/300',
-        postDate: '24 Febrouary 2021',
-        content: this.blogPostContent
-      });
-    }
+    this.sdk.getArticles({ limit: this.limit, offset: 0 }).subscribe(res => {
+      this.blogPosts = res.posts.map(x => { x.imageUrl = 'https://picsum.photos/750/300'; return x; });
+    }, error => { console.error(error) });
   }
 }
