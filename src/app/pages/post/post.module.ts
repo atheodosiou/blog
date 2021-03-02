@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PostComponent } from './post.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
       path: '',
       component: PostComponent
     }]),
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   declarations: [PostComponent],
   exports: [PostComponent]

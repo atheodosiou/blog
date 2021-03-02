@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
       component: HomeComponent
     }]),
     SharedModule,
+    FormsModule
   ],
   declarations: [HomeComponent],
   exports: [HomeComponent]

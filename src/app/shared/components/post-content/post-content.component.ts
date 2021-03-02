@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-content',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PostContentComponent implements OnInit {
 
   constructor() { }
+  @Input() content:string="<h1>Hello World!</h1>";
 
   ngOnInit() {
   }
