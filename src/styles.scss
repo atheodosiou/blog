@@ -11,3 +11,13 @@ body{
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }
+
+.btn-gray{
+    background-color: rgba($color: $blue, $alpha: 0.5) !important;
+    color: rgba($color: $gray-300, $alpha: 0.9) !important;
+
+    &:hover{
+        background-color: rgba($color: $blue, $alpha: 0.7) !important;
+        color: rgba($color: $gray-300, $alpha: 1) !important;
+    }
+}

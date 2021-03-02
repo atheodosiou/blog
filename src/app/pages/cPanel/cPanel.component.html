@@ -3,16 +3,48 @@
     <div class="row">
       <div class="col-12 bg-dark pt-2 pb-2 d-flex flex-row align-items-center justify-content-between">
         <p class="h3 text-white m-0">Anastasios Theodosiou - Blog panel</p>
-        <button type="button" class="btn btn-primary">New article</button>
+        <div class="actions">
+          <button type="button" class="btn btn-gray mr-2" routerLink="/home">Blog</button>
+          <button type="button" class="btn btn-primary">New article</button>
+        </div>
       </div>
-      <div class="col-6 pt-2 pl-2 pr-1">
+      <div class="col-5 pt-2 pb-2 scrollable-col">
+        <div class="list-group" *ngIf="result?.posts?.length>0">
+          <a *ngFor="let post of result?.posts" href="#" class="list-group-item list-group-item-action"
+            aria-current="true">
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="https://picsum.photos/100/100" class="img-fluid rounded mr-2" alt="blog thumbnail photo">
+              <div class="d-flex flex-column w-100">
+                <div class="d-flex w-100 justify-content-between mb-1">
+                  <h5 class="m-0 p-0">{{post.title}}</h5>
+                  <small>3 days ago</small>
+                </div>
+                <small>{{post?.preview}}</small>
+                <div class="d-flex flex-row align-items-center mt-1 w-100"
+                  [ngClass]="{'justify-content-between':post?.tags?.length>0,'justify-content-end':post?.tags?.length===0}">
+                  <div *ngIf="post?.tags?.length>0" class="d-flex flex-row align-items-center justify-content-start">
+                    <span *ngFor="let tag of post?.tags"
+                      class="badge rounded-pill bg-dark text-white mr-1">{{tag}}</span>
+                  </div>
+                  <div class="d-flex flex-row align-items-center justify-content-start">
+                    <span class="mr-1"><i class="fas fa-eye mr-1"></i>2315</span>
+                    <span class="mr-1"><i class="fas fa-thumbs-up mr-1"></i>36</span>
+                    <span><i class="fas fa-comment mr-1"></i>5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="col-6 pt-2 pl-2 pr-1">
         <app-editor (onTechChange)="htmlContent=$event;"></app-editor>
       </div>
       <div class="col-6 pt-2 pl-1 pr-2">
         <div class="border bg-white d-flex flex-row align-items-center justify-content-start h1 p-1 mb-0"
           style="height: 74px;">Preview</div>
         <div class="preview-panel border bg-white" [innerHtml]="htmlContent"></div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
