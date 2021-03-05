@@ -11,6 +11,7 @@ const routes: Routes = [
       post: PostResolver
     }
   },
+  { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
   { path: 'cpanel', loadChildren: () => import('./pages/cPanel/cPanel.module').then(m => m.CPanelModule) },
   { path: '**', redirectTo: '/home' }
 ];
